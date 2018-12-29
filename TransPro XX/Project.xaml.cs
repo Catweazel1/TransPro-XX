@@ -26,5 +26,10 @@ namespace TransPro_XX
         {
             this.InitializeComponent();
         }
+
+        private void ChkBxComplete_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }

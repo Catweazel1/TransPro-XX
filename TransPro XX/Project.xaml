@@ -29,8 +29,7 @@
             </ListBox>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <TextBlock Text="Levering compleet:"/>
-            <CheckBox Name="ChkBxComplete"/>
+            <CheckBox Name="ChkBxComplete" Content="Compleet?" Tapped="ChkBxComplete_Tapped"/>
             <TextBlock Text="Datum compleet:"/>
             <TextBox Name="TxtDateComplete"/>
             <TextBlock Text="Kopieën:"/>
