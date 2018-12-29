@@ -13,5 +13,28 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="Projectnummer:"/>
+            <TextBox Name="TxtProjectNumber"/>
+            <TextBlock Text="Eindgebruiker:"/>
+            <TextBox Name="TxtEndUser"/>
+            <TextBlock Text="Orderstatus:"/>
+            <ListBox Name="LstBxOrderStatus">
+                <ListBoxItem Content="V1" IsSelected="True"/>
+                <ListBoxItem Content="V2"/>
+                <ListBoxItem Content="V3"/>
+                <ListBoxItem Content="V4"/>
+                <ListBoxItem Content="V5"/>
+                <ListBoxItem Content="V6"/>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Levering compleet:"/>
+            <CheckBox Name="ChkBxComplete"/>
+            <TextBlock Text="Datum compleet:"/>
+            <TextBox Name="TxtDateComplete"/>
+            <TextBlock Text="Kopieën:"/>
+            <TextBox Name="TxtCopies"/>
+        </StackPanel>
     </Grid>
 </Page>

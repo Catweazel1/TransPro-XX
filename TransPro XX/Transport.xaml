@@ -9,6 +9,27 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="Naam Ontvanger:"/>
+            <TextBox Name="TxtCustName"/>
+            <TextBlock Text="t.a.v.:"/>
+            <TextBox Name="TxtAttn"/>
+            <TextBlock Text="Woonplaats:"/>
+            <TextBox Name="TxtCity"/>
+            <TextBlock Text="Postcode:"/>
+            <TextBox Name="TxtPostalcode"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Afleverdatum:"/>
+            <TextBox Name="TxtDelivDate"/>
+            <TextBlock Text="Huisnummer:"/>
+            <TextBox Name="TxtHouseNumber"/>
+            <TextBlock Text="Aantal Pallets:"/>
+            <TextBox Name="TxtNumPallets"/>
+        </StackPanel>
     </Grid>
 </Page>
