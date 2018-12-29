@@ -13,7 +13,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
+        <StackPanel Margin="10">
             <TextBlock Text="Naam Ontvanger:"/>
             <TextBox Name="TxtCustName"/>
             <TextBlock Text="t.a.v.:"/>
@@ -23,7 +23,7 @@
             <TextBlock Text="Postcode:"/>
             <TextBox Name="TxtPostalcode"/>
         </StackPanel>
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Margin="10">
             <TextBlock Text="Afleverdatum:"/>
             <TextBox Name="TxtDelivDate"/>
             <TextBlock Text="Huisnummer:"/>

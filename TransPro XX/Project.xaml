@@ -13,7 +13,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
+        <StackPanel Margin="10">
             <TextBlock Text="Projectnummer:"/>
             <TextBox Name="TxtProjectNumber"/>
             <TextBlock Text="Eindgebruiker:"/>
@@ -28,7 +28,7 @@
                 <ListBoxItem Content="V6"/>
             </ListBox>
         </StackPanel>
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Margin="10">
             <CheckBox Name="ChkBxComplete" Content="Compleet?" Tapped="ChkBxComplete_Tapped"/>
             <TextBlock Text="Datum compleet:"/>
             <TextBox Name="TxtDateComplete"/>

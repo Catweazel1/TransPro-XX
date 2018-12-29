@@ -25,14 +25,44 @@ namespace TransPro_XX
         public MainPage()
         {
             this.InitializeComponent();
-            MainFrame.Navigate(typeof(Transport));
+            LstBxItmProjectForm.IsSelected = true;
+            BackButton.Visibility = Visibility.Collapsed;
+            TxtBlckTitle.Text = "Project Formulier";
+            MainFrame.Navigate(typeof(Project));
         }
 
-        private void Backbutton_Click(object sender, RoutedEventArgs e)
+        private void LstBxIcons_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (LstBxItmProjectForm.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+                TxtBlckTitle.Text = "Project Formulier";
+                MainFrame.Navigate(typeof(Project));
+            }
+            else if (LstBxItmTransportStickers.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                TxtBlckTitle.Text = "Transport Stickers";
+                MainFrame.Navigate(typeof(Transport));
+            }
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
+        }
+
+        private void PrintButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             if (MainFrame.CanGoBack)
             {
                 MainFrame.GoBack();
+                LstBxItmProjectForm.IsSelected = true;
             }
         }
     }
