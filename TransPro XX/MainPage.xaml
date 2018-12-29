@@ -9,6 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        
+        <StackPanel Orientation="Horizontal">
+            <Button Name="Backbutton" Content="<-" Click="Backbutton_Click"/>
+        </StackPanel>
+        <Frame Name="MainFrame">
+            
+        </Frame>
     </StackPanel>
 </Page>

@@ -25,6 +25,15 @@ namespace TransPro_XX
         public MainPage()
         {
             this.InitializeComponent();
+            MainFrame.Navigate(typeof(Transport));
+        }
+
+        private void Backbutton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
         }
     }
 }
