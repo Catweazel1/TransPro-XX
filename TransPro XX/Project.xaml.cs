@@ -31,5 +31,10 @@ namespace TransPro_XX
         {
 
         }
+
+        private void TxtEndUser_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

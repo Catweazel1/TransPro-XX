@@ -17,16 +17,16 @@
             <TextBlock Text="Projectnummer:"/>
             <TextBox Name="TxtProjectNumber"/>
             <TextBlock Text="Eindgebruiker:"/>
-            <TextBox Name="TxtEndUser"/>
+            <TextBox Name="TxtEndUser" TextChanged="TxtEndUser_TextChanged"/>
             <TextBlock Text="Orderstatus:"/>
-            <ListBox Name="LstBxOrderStatus">
-                <ListBoxItem Content="V1" IsSelected="True"/>
-                <ListBoxItem Content="V2"/>
-                <ListBoxItem Content="V3"/>
-                <ListBoxItem Content="V4"/>
-                <ListBoxItem Content="V5"/>
-                <ListBoxItem Content="V6"/>
-            </ListBox>
+            <ComboBox Name="CmbBxOrderStatus" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="105">
+                <ComboBoxItem Content="V1" IsSelected="True"/>
+                <ComboBoxItem Content="V2"/>
+                <ComboBoxItem Content="V3"/>
+                <ComboBoxItem Content="V4"/>
+                <ComboBoxItem Content="V5"/>
+                <ComboBoxItem Content="V6"/>
+            </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10">
             <CheckBox Name="ChkBxComplete" Content="Compleet?" Tapped="ChkBxComplete_Tapped"/>
