@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="TransPro_XX.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TransPro_XX"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBox Text="Formulier Printer:"/>
+            <ComboBox Name="CmbBxFormPrinter" Width="106" HorizontalAlignment="Left">
+                <ComboBoxItem Name="CmbBxItmFormPrinter"/>
+            </ComboBox>
+            <TextBox Text="Sticker Printer:"/>
+            <ComboBox Name="CmbBxStickerPrinter" Width="106" HorizontalAlignment="Left">
+                <ComboBoxItem Name="CmbBxItmStickerPrinter"/>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Page>

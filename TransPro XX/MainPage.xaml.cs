@@ -45,6 +45,12 @@ namespace TransPro_XX
                 TxtBlckTitle.Text = "Transport Stickers";
                 MainFrame.Navigate(typeof(Transport));
             }
+            else if (LstBxItmSettings.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                TxtBlckTitle.Text = "Instellingen";
+                MainFrame.Navigate(typeof(Settings));
+            }
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
