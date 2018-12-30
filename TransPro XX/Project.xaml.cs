@@ -33,6 +33,8 @@ namespace TransPro_XX
         {
             CalDateComplete.IsEnabled = !CalDateComplete.IsEnabled;
             CalDateComplete.Date = DateTime.Today;
+            if(!CalDateComplete.IsEnabled)
+                CalDateComplete.Date = null;
         }
 
         private void TxtEndUser_TextChanged(object sender, TextChangedEventArgs e)
