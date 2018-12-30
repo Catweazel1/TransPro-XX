@@ -15,11 +15,11 @@
         </Grid.ColumnDefinitions>
         <StackPanel Margin="10">
             <TextBlock Text="Projectnummer:"/>
-            <TextBox Name="TxtProjectNumber" Width="106"/>
+            <TextBox Name="TxtProjectNumber" Style="{StaticResource MyTextBoxStyle}"/>
             <TextBlock Text="Eindgebruiker:"/>
-            <TextBox Name="TxtEndUser" TextChanged="TxtEndUser_TextChanged" Width="106"/>
+            <TextBox Name="TxtEndUser" TextChanged="TxtEndUser_TextChanged" Style="{StaticResource MyTextBoxStyle}"/>
             <TextBlock Text="Orderstatus:"/>
-            <ComboBox Name="CmbBxOrderStatus" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="105">
+            <ComboBox Name="CmbBxOrderStatus" Margin="0,0,0,0" Style="{StaticResource MyComboStyle}">
                 <ComboBoxItem Content="V1" IsSelected="True"/>
                 <ComboBoxItem Content="V2"/>
                 <ComboBoxItem Content="V3"/>

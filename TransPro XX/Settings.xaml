@@ -10,12 +10,12 @@
 
     <Grid>
         <StackPanel Margin="10">
-            <TextBox Text="Formulier Printer:"/>
-            <ComboBox Name="CmbBxFormPrinter" Width="106" HorizontalAlignment="Left">
+            <TextBlock Text="Formulier Printer:"/>
+            <ComboBox Name="CmbBxFormPrinter" Style="{StaticResource MyComboStyle}">
                 <ComboBoxItem Name="CmbBxItmFormPrinter"/>
             </ComboBox>
-            <TextBox Text="Sticker Printer:"/>
-            <ComboBox Name="CmbBxStickerPrinter" Width="106" HorizontalAlignment="Left">
+            <TextBlock Text="Sticker Printer:"/>
+            <ComboBox Name="CmbBxStickerPrinter" Style="{StaticResource MyComboStyle}">
                 <ComboBoxItem Name="CmbBxItmStickerPrinter"/>
             </ComboBox>
         </StackPanel>
