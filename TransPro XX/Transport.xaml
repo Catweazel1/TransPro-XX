@@ -25,7 +25,7 @@
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10">
             <TextBlock Text="Afleverdatum:"/>
-            <TextBox Name="TxtDelivDate"/>
+            <CalendarDatePicker PlaceholderText="datum selecteren" DateFormat="{}{day.integer}/{month.integer}/{year.full}"/>
             <TextBlock Text="Huisnummer:"/>
             <TextBox Name="TxtHouseNumber"/>
             <StackPanel Orientation="Horizontal">

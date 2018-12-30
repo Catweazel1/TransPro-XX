@@ -31,7 +31,7 @@
         <StackPanel Grid.Column="1" Margin="10">
             <CheckBox Name="ChkBxComplete" Content="Compleet?" Tapped="ChkBxComplete_Tapped"/>
             <TextBlock Text="Datum compleet:"/>
-            <TextBox Name="TxtDateComplete"/>
+            <CalendarDatePicker PlaceholderText="datum selecteren" DateFormat="{}{day.integer}/{month.integer}/{year.full}" Name="CalDateComplete"/>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Kopieën:"/>
                 <TextBlock Name="TxtCopyResult" Margin="10,0,0,0" Text="{x:Bind SldrCopies.Value, Mode=OneWay}"/>

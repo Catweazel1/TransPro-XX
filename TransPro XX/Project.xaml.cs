@@ -25,11 +25,14 @@ namespace TransPro_XX
         public Project()
         {
             this.InitializeComponent();
+            CalDateComplete.IsEnabled = false;
+
         }
 
         private void ChkBxComplete_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            CalDateComplete.IsEnabled = !CalDateComplete.IsEnabled;
+            CalDateComplete.Date = DateTime.Today;
         }
 
         private void TxtEndUser_TextChanged(object sender, TextChangedEventArgs e)
