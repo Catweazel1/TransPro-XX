@@ -28,8 +28,13 @@
             <TextBox Name="TxtDelivDate"/>
             <TextBlock Text="Huisnummer:"/>
             <TextBox Name="TxtHouseNumber"/>
-            <TextBlock Text="Aantal Pallets:"/>
-            <TextBox Name="TxtNumPallets"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Aantal Pallets:"/>
+                <TextBlock Name="TxtNumPallets" Text="{x:Bind SldrNumPallets.Value, Mode=OneWay}"/>
+            </StackPanel>
+            <Slider Name="SldrNumPallets"
+                    Minimum="1"
+                    Maximum="100"/>
         </StackPanel>
     </Grid>
 </Page>

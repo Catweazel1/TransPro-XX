@@ -32,8 +32,13 @@
             <CheckBox Name="ChkBxComplete" Content="Compleet?" Tapped="ChkBxComplete_Tapped"/>
             <TextBlock Text="Datum compleet:"/>
             <TextBox Name="TxtDateComplete"/>
-            <TextBlock Text="Kopieën:"/>
-            <TextBox Name="TxtCopies"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Kopieën:"/>
+                <TextBlock Name="TxtCopyResult" Margin="10,0,0,0" Text="{x:Bind SldrCopies.Value, Mode=OneWay}"/>
+            </StackPanel>
+            <Slider Name="SldrCopies"
+                    Minimum="1"
+                    Maximum="100"/>
         </StackPanel>
     </Grid>
 </Page>
