@@ -15,9 +15,9 @@
         </Grid.ColumnDefinitions>
         <StackPanel Margin="10">
             <TextBlock Text="Projectnummer:"/>
-            <TextBox Name="TxtProjectNumber"/>
+            <TextBox Name="TxtProjectNumber" Width="106"/>
             <TextBlock Text="Eindgebruiker:"/>
-            <TextBox Name="TxtEndUser" TextChanged="TxtEndUser_TextChanged"/>
+            <TextBox Name="TxtEndUser" TextChanged="TxtEndUser_TextChanged" Width="106"/>
             <TextBlock Text="Orderstatus:"/>
             <ComboBox Name="CmbBxOrderStatus" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="105">
                 <ComboBoxItem Content="V1" IsSelected="True"/>

@@ -15,19 +15,19 @@
         </Grid.ColumnDefinitions>
         <StackPanel Margin="10">
             <TextBlock Text="Naam Ontvanger:"/>
-            <TextBox Name="TxtCustName"/>
+            <TextBox Name="TxtCustName" Width="106"/>
             <TextBlock Text="t.a.v.:"/>
-            <TextBox Name="TxtAttn"/>
+            <TextBox Name="TxtAttn" Width="106"/>
             <TextBlock Text="Woonplaats:"/>
-            <TextBox Name="TxtCity"/>
+            <TextBox Name="TxtCity" Width="106"/>
             <TextBlock Text="Postcode:"/>
-            <TextBox Name="TxtPostalcode"/>
+            <TextBox Name="TxtPostalcode" Width="106"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10">
             <TextBlock Text="Afleverdatum:"/>
             <CalendarDatePicker PlaceholderText="datum selecteren" DateFormat="{}{day.integer}/{month.integer}/{year.full}"/>
             <TextBlock Text="Huisnummer:"/>
-            <TextBox Name="TxtHouseNumber"/>
+            <TextBox Name="TxtHouseNumber" Width="106" HorizontalAlignment="Left"/>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Aantal Pallets:"/>
                 <TextBlock Name="TxtNumPallets" Text="{x:Bind SldrNumPallets.Value, Mode=OneWay}"/>
