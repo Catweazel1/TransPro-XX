@@ -29,7 +29,7 @@
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10">
-            <CheckBox Name="ChkBxComplete" Content="Compleet?" Tapped="ChkBxComplete_Tapped"/>
+            <CheckBox Name="ChkBxComplete" Content="Compleet?" Checked="ChkBxComplete_Checked" Unchecked="ChkBxComplete_Checked"/>
             <TextBlock Text="Datum compleet:"/>
             <CalendarDatePicker PlaceholderText="datum selecteren" DateFormat="{}{day.integer}/{month.integer}/{year.full}" Name="CalDateComplete"/>
             <StackPanel Orientation="Horizontal">

@@ -29,17 +29,17 @@ namespace TransPro_XX
 
         }
 
-        private void ChkBxComplete_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            CalDateComplete.IsEnabled = !CalDateComplete.IsEnabled;
-            CalDateComplete.Date = DateTime.Today;
-            if(!CalDateComplete.IsEnabled)
-                CalDateComplete.Date = null;
-        }
-
         private void TxtEndUser_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void ChkBxComplete_Checked(object sender, RoutedEventArgs e)
+        {
+            CalDateComplete.IsEnabled = !CalDateComplete.IsEnabled;
+            CalDateComplete.Date = DateTime.Today;
+            if (!CalDateComplete.IsEnabled)
+                CalDateComplete.Date = null;
         }
     }
 }
