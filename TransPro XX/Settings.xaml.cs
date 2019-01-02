@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +23,16 @@ namespace TransPro_XX
     /// </summary>
     public sealed partial class Settings : Page
     {
+        private DeviceInformationCollection deviceCollection;
+
         public Settings()
         {
             this.InitializeComponent();
+        }
+
+        private async void CmbBxFormPrinter_Loaded(object sender, RoutedEventArgs e)
+        {
+            deviceCollection = await DeviceInformation.FindAllAsync("System.Devices.InterfaceClassGuid:=\"{0ecef634-6ef0-472a-8085-5ad023ecbccd}\"");
         }
     }
 }
