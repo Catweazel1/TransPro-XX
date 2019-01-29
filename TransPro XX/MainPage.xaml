@@ -11,6 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <RelativePanel>
             <Button Name="HamburgerButton" 
@@ -70,5 +71,6 @@
                 <Frame Name="MainFrame"/>
             </SplitView.Content>
         </SplitView>
+        <TextBlock Grid.Row="2" Name="StatusBlock" Margin="0,0,0,5" Visibility="Collapsed"/>
     </Grid>
 </Page>

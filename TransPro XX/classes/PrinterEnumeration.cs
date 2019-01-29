@@ -47,7 +47,7 @@ namespace TransPro_XX.classes
                 {
                     printerList.Add(new PrinterInfo(
                         (string)printerInterfaceInformation.Properties["System.ItemNameDisplay"],
-                        (string)printerInterfaceInformation.Id);
+                        (string)printerInterfaceInformation.Id));
                 }
             }
             return printerList;
