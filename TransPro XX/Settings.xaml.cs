@@ -27,44 +27,9 @@ namespace TransPro_XX
     /// </summary>
     public sealed partial class Settings : Page
     {
-        private DeviceInformationCollection deviceCollection;
-
         public Settings()
         {
             this.InitializeComponent();
-        }
-
-        private async void CmbBxFormPrinter_Loaded(object sender, RoutedEventArgs e)
-        {
-            MainPage rootPage = MainPage.Current;
-
-            try
-            {
-                rootPage.NotifyUser("Enumerating printers. Please wait", NotifyType.StatusMessage);
-
-                // Retrieve the running app&#39;s package family name, and enumerate associated printers
-                string currentPackageFamilyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
-
-                // Enumerate associated printers.
-                PrinterEnumeration pe = new PrinterEnumeration(currentPackageFamilyName);
-                List<PrinterInfo> associatedPrinters = await pe.EnumeratePrinterAsync();
-
-                // Update the datae binding source on the combo box that display the list of printers
-                CmbBxFormPrinter.ItemsSource = associatedPrinters;
-                if (associatedPrinters.Count > 0)
-                {
-                    CmbBxFormPrinter.SelectedIndex = 0;
-                    rootPage.NotifyUser(associatedPrinters.Count + " printers enumerated", NotifyType.StatusMessage);
-                }
-                else
-                {
-                    rootPage.NotifyUser(DisplayStrings.NoPrintersEnumerated, NotifyType.ErrorMessage);
-                }
-            }
-            catch (Exception ex)
-            {
-                rootPage.NotifyUser("Caught an exception: " + ex.Message, NotifyType.ErrorMessage);
-            }
         }
     }
 }

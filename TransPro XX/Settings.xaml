@@ -11,7 +11,7 @@
     <Grid>
         <StackPanel Margin="10">
             <TextBlock Text="Formulier Printer:"/>
-            <ComboBox Name="CmbBxFormPrinter" Style="{StaticResource MyComboStyle}" Loaded="CmbBxFormPrinter_Loaded">
+            <ComboBox Name="CmbBxFormPrinter" Style="{StaticResource MyComboStyle}">
                 <ComboBoxItem Name="CmbBxItmFormPrinter"/>
             </ComboBox>
             <TextBlock Text="Sticker Printer:"/>
