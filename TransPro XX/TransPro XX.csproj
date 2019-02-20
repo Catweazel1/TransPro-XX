@@ -95,13 +95,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="classes\DisplayStrings.cs" />
-    <Compile Include="classes\PrinterEnumeration.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Project.xaml.cs">
       <DependentUpon>Project.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectPageToPrint.xaml.cs">
+      <DependentUpon>ProjectPageToPrint.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.xaml.cs">
@@ -137,6 +138,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Project.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProjectPageToPrint.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

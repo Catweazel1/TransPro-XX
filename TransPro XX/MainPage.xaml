@@ -59,7 +59,7 @@
                             <TextBlock Text="Transport Stickers" FontSize="24"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="LstBxItmSettings">
+                    <ListBoxItem Name="LstBxItmSettings" Visibility="Collapsed">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE713;" Margin="0,0,10,0"/>
                             <TextBlock Text="Instellingen" FontSize="24"/>
