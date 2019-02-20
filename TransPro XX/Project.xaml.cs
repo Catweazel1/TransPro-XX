@@ -26,12 +26,6 @@ namespace TransPro_XX
         {
             this.InitializeComponent();
             CalDateComplete.IsEnabled = false;
-
-        }
-
-        private void TxtEndUser_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         private void ChkBxComplete_Checked(object sender, RoutedEventArgs e)
@@ -40,6 +34,12 @@ namespace TransPro_XX
             CalDateComplete.Date = DateTime.Today;
             if (!CalDateComplete.IsEnabled)
                 CalDateComplete.Date = null;
+        }
+
+        private void Grid_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var obj = App.Current as App;
+            obj.ProjectNumber = TxtProjectNumber.Text;
         }
     }
 }

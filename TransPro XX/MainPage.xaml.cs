@@ -24,14 +24,9 @@ namespace TransPro_XX
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
-        public static MainPage Current;
-        public enum NotifyType { StatusMessage, ErrorMessage };
-
         public MainPage()
         {
             this.InitializeComponent();
-            Current = this;
 
             LstBxItmProjectForm.IsSelected = true;
             BackButton.Visibility = Visibility.Collapsed;
@@ -66,9 +61,33 @@ namespace TransPro_XX
             MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
         }
 
-        private void PrintButton_Click(object sender, RoutedEventArgs e)
+        private async void PrintButton_Click(object sender, RoutedEventArgs e)
         {
+            var obj = App.Current as App;
 
+            switch (TxtBlckTitle.Text)
+            {
+                case "Project Formulier":
+                    ContentDialog dlg = new ContentDialog()
+                    {
+                        Title = "Project Formulier",
+                        Content = $"Dit is een Project Formulier: {obj.ProjectNumber}",
+                        PrimaryButtonText = "OK"
+                    };
+                    await dlg.ShowAsync();
+                    break;
+                case "Transport Stickers":
+                    dlg = new ContentDialog()
+                    {
+                        Title = "Transport Stickers",
+                        Content = "Dit zijn dan de Transport Stickers",
+                        PrimaryButtonText = "OK"
+                    };
+                    await dlg.ShowAsync();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

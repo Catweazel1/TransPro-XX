@@ -26,6 +26,11 @@ namespace TransPro_XX
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+
+        public string ProjectNumber;
+        public string EndUser { get; set; }
+        public string CompleteDelivery { get; set; }
+
         public App()
         {
             this.InitializeComponent();

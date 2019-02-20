@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid LostFocus="Grid_LostFocus">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
@@ -17,7 +17,7 @@
             <TextBlock Text="Projectnummer:"/>
             <TextBox Name="TxtProjectNumber" Style="{StaticResource MyTextBoxStyle}"/>
             <TextBlock Text="Eindgebruiker:"/>
-            <TextBox Name="TxtEndUser" TextChanged="TxtEndUser_TextChanged" Style="{StaticResource MyTextBoxStyle}"/>
+            <TextBox Name="TxtEndUser"  Style="{StaticResource MyTextBoxStyle}"/>
             <TextBlock Text="Orderstatus:"/>
             <ComboBox Name="CmbBxOrderStatus" Margin="0,0,0,0" Style="{StaticResource MyComboStyle}">
                 <ComboBoxItem Content="V1" IsSelected="True"/>
