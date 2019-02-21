@@ -28,8 +28,18 @@ namespace TransPro_XX
         /// </summary>
 
         public string ProjectNumber;
-        public string EndUser { get; set; }
-        public string CompleteDelivery { get; set; }
+        public string OrderStatus;
+        public string EndUser;
+        public string CompleteDelivery;
+        public string DateComplete;
+        public int NumCopies;
+        public string ReceiverName;
+        public string Attn;
+        public string City;
+        public string Postalcode;
+        public string DeliveryDate;
+        public string HouseNumber;
+        public int NumPallets;
 
         public App()
         {
