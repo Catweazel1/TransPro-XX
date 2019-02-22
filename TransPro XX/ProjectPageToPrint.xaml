@@ -10,7 +10,7 @@
 
     <Grid Name="ProjectPrintPage">
         <StackPanel VerticalAlignment="Stretch">
-            <TextBlock Margin="50" FontFamily="Times New Roman" FontSize="36">Formulier Projectgegevens</TextBlock>
+            <TextBlock Margin="50" FontFamily="Times New Roman" FontSize="36" Name="Header">Formulier Projectgegevens</TextBlock>
             <TextBlock Margin="50" FontFamily="Times New Roman" FontSize="36" Name="TxtBlkPrjNr" Text="Projectnummer:"/>
             <TextBlock Margin="50" FontFamily="Times New Roman" FontSize="36" Name="TxtBlkEndUser" Text="Eindgebruiker:"/>
             <StackPanel Orientation="Horizontal">
