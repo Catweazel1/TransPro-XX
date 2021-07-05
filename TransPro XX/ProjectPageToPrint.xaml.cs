@@ -36,32 +36,14 @@ namespace TransPro_XX
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            RegisterForPrinting();
-            PreparePrintContent(new ProjectPageToPrint());
-            ContentDialog dlg = new ContentDialog()
-            {
-                Title = "Print Status",
-                Content = "Print contract registered with customization, use the Print button to print",
-                PrimaryButtonText = "OK"
-            };
+           
         }
        
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            UnregisterForPrinting();
+
         }
 
-        public virtual void RegisterForPrinting()
-        {
-            printDocument = new PrintDocument();
-            printDocumentSource = printDocument.DocumentSource;
-            printDocument.Paginate += CreatePrintPreviewPages;
-            printDocument.GetPreviewPage += GetPreviewPage;
-            printDocument.AddPages += AddPrintPages;
-
-            PrintManager printMan = PrintManager.GetForCurrentView();
-            printMan.PrintTaskRequested += PrintTaskRequested;
-        }
 
         private void PreparePrintContent(Page page)
         {
@@ -79,22 +61,5 @@ namespace TransPro_XX
             PrintCanvas.UpdateLayout();
         }
 
-        public virtual void UnregisterForPrinting()
-        {
-            if(printDocument == null)
-            {
-                return;
-            }
-
-            printDocument.Paginate -= CreatePrintPreviewPages;
-            printDocument.GetPreviewPage -= GetPrintPreviewPage;
-            printDocument.AddPages -= AddPrintPages;
-
-            // Remove the handler for printing initialization.
-            PrintManager printMan = PrintManager.GetForCurrentView();
-            printMan.PrintTaskRequested -= PrintTaskRequested;
-
-            PrintCanvas.Children.Clear();
-        }
     }
 }
